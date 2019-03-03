@@ -38,6 +38,12 @@
 #include <OpenGL/GL.h>
 #include <OpenGL/GLU.h>
 #else
+#if defined (_WIN32)
+#  ifndef NOMINMAX
+#    define NOMINMAX
+#  endif
+#include <windows.h>
+#endif // _WIN32
 #include <GL/gl.h>
 #include <GL/glu.h>
 #endif
